@@ -1,6 +1,6 @@
 class LEnlazada {
-    Nodo cabeza;
-    Nodo ultimo; // Agregamos un nodo "último" para mantener un seguimiento del último nodo en la lista
+    private Nodo cabeza;
+    private Nodo ultimo; // Agregamos un nodo "último" para mantener un seguimiento del último nodo en la lista
 
     public LEnlazada() {
         this.cabeza = null;
@@ -13,7 +13,7 @@ class LEnlazada {
             cabeza = nuevoNodo;
             ultimo = nuevoNodo; // Establecemos el último nodo
         } else {
-            nuevoNodo.siguiente = cabeza;
+            nuevoNodo.SetSiguiente(cabeza);
             cabeza = nuevoNodo;
         }
     }
@@ -24,7 +24,7 @@ class LEnlazada {
             cabeza = nuevoNodo;
             ultimo = nuevoNodo; // Establecemos el último nodo
         } else {
-            ultimo.siguiente = nuevoNodo; // Agregamos el nuevo nodo al final
+            ultimo.SetSiguiente(nuevoNodo); // Agregamos el nuevo nodo al final
             ultimo = nuevoNodo; // Actualizamos el último nodo
         }
     }
@@ -34,5 +34,6 @@ class LEnlazada {
         return cabeza;
 
     }
+
 
 }

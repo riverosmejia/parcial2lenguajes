@@ -1,13 +1,12 @@
 class Clasf_Pacientes {
     public static void clasificarpaciente(Paciente paciente) {
-        if (paciente.sintomas > 10) {
-            paciente.estado = "paciente crítico";
-        } else if (paciente.sintomas >= 5 && paciente.sintomas <= 10) {
-            paciente.estado = "paciente urgente";
-        } else if (paciente.sintomas < 5) {
-            paciente.estado = "paciente no crítico";
+        if (paciente.getSin() > 10) {
+            paciente.setStado("paciente crítico");
+        } else if (paciente.getSin() >= 5 && paciente.getSin() <= 10) {
+            paciente.setStado("paciente urgente");
+        } else if (paciente.getSin() < 5) {
+            paciente.setStado("paciente no crítico");
         }
     }
 }
-
 

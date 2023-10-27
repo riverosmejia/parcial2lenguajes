@@ -1,8 +1,8 @@
 class Paciente {
-    int identificacion;
-    int sintomas;
-    String nombre;
-    String estado;
+    private int identificacion;
+    private int sintomas;
+    private String nombre;
+    private String estado;
 
     public Paciente(int identificacion, int sintomas, String nombre) {
         this.identificacion = identificacion;
@@ -17,5 +17,35 @@ class Paciente {
         } else {
             this.estado = "paciente no crítico";
         }
+    }
+
+    public int getIden(){
+
+        return identificacion;
+
+    }
+
+        public int getSin(){
+
+        return sintomas;
+
+    }
+
+        public String getName(){
+
+        return nombre;
+
+    }
+
+        public String getStado(){
+
+        return estado;
+
+    }
+
+    public void setStado(String s1){
+
+        this.estado=s1;
+
     }
 }

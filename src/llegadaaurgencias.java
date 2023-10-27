@@ -18,16 +18,16 @@ public class llegadaaurgencias {
         listaPacientes.agregaralFinal(jose);
 
         // Imprime a los pacientes uno por uno
-        System.out.println("Lista de pacientes:");
+        System.out.println("\nLista de pacientes:\n");
         imp.imprimirLista(listaPacientes.getCabeza());
 
         // Clasifica a los pacientes según su estado
-        for (Nodo nodo = listaPacientes.cabeza; nodo != null; nodo = nodo.siguiente) {
-            Clasf_Pacientes.clasificarpaciente(nodo.paciente);
+        for (Nodo nodo = listaPacientes.getCabeza(); nodo != null; nodo = nodo.getSiguiente()) {
+            Clasf_Pacientes.clasificarpaciente(nodo.getPaciente());
         }
 
         // Imprime a los pacientes en el orden correcto según su estado
-        System.out.println("Lista de pacientes según su estado:");
+        System.out.println("\nLista de pacientes según su estado:\n");
         DespacharPacientes.Despachar(listaPacientes, imp);
     }
 }
