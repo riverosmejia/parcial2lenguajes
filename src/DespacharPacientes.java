@@ -1,14 +1,14 @@
 class DespacharPacientes {
-    public static void Despachar(LEnlazada lista) {
+    public static void Despachar(LEnlazada lista, imprimir imp) {
         Nodo actual = lista.cabeza;
         while (actual != null) {
             if (actual.paciente.estado.equals("paciente crítico")) {
-                System.out.println("El paciente " + actual.paciente.nombre + " con identificación " + actual.paciente.identificacion + " fue operado, medicado y dado de alta");
+                imp.imprirDespacho(1,actual.paciente.nombre,actual.paciente.identificacion);
             } else if (actual.paciente.estado.equals("paciente urgente")) {
-                System.out.println("El paciente " + actual.paciente.nombre + " con identificación " + actual.paciente.identificacion + " fue medicado y dado de alta");
+                imp.imprirDespacho(2,actual.paciente.nombre,actual.paciente.identificacion);
             } else if (actual.paciente.estado.equals("paciente no critico")) {
-                System.out.println("El paciente " + actual.paciente.nombre + " con identificación " + actual.paciente.identificacion + " fue revisado y dado de alta");
-            }
+                imp.imprirDespacho(3,actual.paciente.nombre,actual.paciente.identificacion);   
+                   }
             actual = actual.siguiente; // Avanza al siguiente nodo en cada iteración
         }
     }

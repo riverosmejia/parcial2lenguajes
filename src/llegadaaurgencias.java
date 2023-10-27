@@ -2,6 +2,8 @@ public class llegadaaurgencias {
     public static void Funcionamiento(){
         LEnlazada listaPacientes = new LEnlazada();
 
+        imprimir imp = new imprimir();
+
         // Agrega pacientes a la lista enlazada
         Paciente thomas = new Paciente(13436, 15, "Thomas");
         Paciente juan = new Paciente(12837, 5, "Juan");
@@ -17,7 +19,7 @@ public class llegadaaurgencias {
 
         // Imprime a los pacientes uno por uno
         System.out.println("Lista de pacientes:");
-        listaPacientes.imprimirLista();
+        imp.imprimirLista(listaPacientes.getCabeza());
 
         // Clasifica a los pacientes según su estado
         for (Nodo nodo = listaPacientes.cabeza; nodo != null; nodo = nodo.siguiente) {
@@ -26,7 +28,7 @@ public class llegadaaurgencias {
 
         // Imprime a los pacientes en el orden correcto según su estado
         System.out.println("Lista de pacientes según su estado:");
-        DespacharPacientes.Despachar(listaPacientes);
+        DespacharPacientes.Despachar(listaPacientes, imp);
     }
 }
 

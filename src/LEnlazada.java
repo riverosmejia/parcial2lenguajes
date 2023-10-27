@@ -29,12 +29,10 @@ class LEnlazada {
         }
     }
 
-    public void imprimirLista() {
-        Nodo actual = cabeza;
-        while (actual != null) {
-            System.out.println("Nombre: " + actual.paciente.nombre + " -> Estado: " + actual.paciente.estado);
-            actual = actual.siguiente;
-        }
+    public Nodo getCabeza(){
+
+        return cabeza;
+
     }
 
 }
